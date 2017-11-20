@@ -1,0 +1,26 @@
+// Field Group Component
+//
+// ------------------------------------------------------------------------
+
+// Imports
+// ------------------------------------------------------------------------
+@import "assets/styles/base/utils";
+@import "assets/styles/base/global-variables";
+
+// Block
+// ------------------------------------------------------------------------
+.field-group {
+  display: flex;
+
+  // Elements
+  // ------------------------------------------------------------------------
+  &__item {
+    width: 50%;
+  }
+}
+
+// Since our component is quite small, we can allow us to use this kind of
+// specificity without major performance cost.
+.field-group__item:nth-child(1) {
+  padding-right: $g-m-padding;
+}

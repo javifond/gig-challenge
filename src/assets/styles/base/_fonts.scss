@@ -1,0 +1,21 @@
+// Font Faces Definition
+//
+// Fonts provided where not complete, but this is how I'd handle them.
+// ------------------------------------------------------------------------
+@font-face {
+  font-family: "Action Light";
+  font-weight: 200;
+  src: url("../../fonts/action/200/action.eot");
+  src: url("../../fonts/action/200/action.woff2") format("woff2"),
+    url("../../fonts/action/200/action.woff") format("woff"),
+    url("../../fonts/action/200/action.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Action Medium";
+  font-weight: 400;
+  src: url("../../fonts/action/400/action.eot");
+  src: url("../../fonts/action/400/action.woff2") format("woff2"),
+    url("../../fonts/action/400/action.woff") format("woff"),
+    url("../../fonts/action/400/action.ttf") format("truetype");
+}

@@ -1,0 +1,68 @@
+// Input Component
+//
+// Styling Input single component
+// ------------------------------------------------------------------------
+// Imports
+// ------------------------------------------------------------------------
+@import "assets/styles/base/global-variables";
+@import "assets/styles/base/color";
+
+// Local Variables
+// ------------------------------------------------------------------------
+$opacity: 0.6;
+$text-box-color: rgba($uiGreen, $opacity);
+$text-padding: 12px;
+$box-shadow-blur: 12px;
+$input-height: 40px;
+$icon-position-top: 24px;
+$icon-position-right: 16px;
+
+// Block
+// ------------------------------------------------------------------------
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $half-gutter;
+  margin-top: $half-gutter;
+  position: relative;
+
+  // Elements
+  // ------------------------------------------------------------------------
+  &__label {
+    font-size: $xs-font-size;
+    text-transform: uppercase;
+    margin-bottom: $quarter-of-gutter;
+  }
+
+  &__text {
+    appearance: none;
+    background: transparent;
+    border: 1px solid $text-box-color;
+    border-radius: 0;
+    box-shadow: 0 0 $box-shadow-blur $text-box-color;
+    color: $uiWhite;
+    height: $input-height;
+    outline: none;
+    padding-left: $text-padding;
+    text-transform: uppercase;
+    transition: box-shadow $animation-duration $animation-time-function;
+    z-index: 1;
+
+    // Modifier
+    // ------------------------------------------------------------------------
+    &--error {
+      border-color: $uiRed;
+      box-shadow: 0 0 $box-shadow-blur $uiRed;
+    }
+
+    &:focus {
+      box-shadow: 0 0 $box-shadow-blur $uiGreen;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: $icon-position-right;
+    top: $icon-position-top;
+  }
+}

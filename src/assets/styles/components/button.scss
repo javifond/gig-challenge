@@ -1,0 +1,49 @@
+// Button Component
+//
+// Description & Documentation
+// ------------------------------------------------------------------------
+
+// Imports
+// ------------------------------------------------------------------------
+@import "../base/global-variables";
+@import "../base/color";
+@import "../base/utils";
+
+// Variables
+// ------------------------------------------------------------------------
+$opacity: 0.2;
+$btn-bg: rgba($uiWhite, $opacity);
+$btn-primary-font-size: 16px;
+
+// Block
+// ------------------------------------------------------------------------
+.btn {
+  background: $btn-bg;
+  border: 0;
+  color: $uiWhite;
+  outline: 0;
+  padding: $g-l-padding;
+  text-transform: uppercase;
+  opacity: 1;
+  transition: opacity $animation-duration;
+  width: 100%;
+  will-change: opacity;
+
+  // Modifier
+  // ------------------------------------------------------------------------
+  &--primary {
+    font-size: $btn-primary-font-size;
+    font-weight: 200;
+  }
+
+  &--half-for-bp-m {
+    @include bp($bp-m) {
+      margin: 0 auto;
+      width: 50%;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

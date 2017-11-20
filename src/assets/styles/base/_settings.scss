@@ -1,0 +1,26 @@
+// Global Settings
+//
+// ------------------------------------------------------------------------
+
+@import "reset";
+@import "global-variables";
+@import "color";
+
+input {
+  &::-webkit-input-placeholder {
+    color: $placeholder-color;
+  }
+  &:-ms-input-placeholder {
+    color: $placeholder-color;
+  }
+  &::-moz-placeholder {
+    color: $placeholder-color;
+    opacity: 1;
+  }
+}
+
+// Small hack to make all fields same height, due the
+// border and padding added buy the browser.
+select {
+  height: 44px !important;
+}

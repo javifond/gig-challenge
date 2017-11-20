@@ -1,0 +1,36 @@
+// Global Variables
+//
+// ------------------------------------------------------------------------
+@import "color";
+
+//Box - Gutters
+$font-size: 16px !default;
+$xxl-font-size: 32px !default;
+$xl-font-size: 18px !default;
+$s-font-size: 12px !default;
+$xs-font-size: 8px !default;
+$gutter: $font-size;
+$double-gutter: 2*$font-size;
+$half-gutter: 0.5*$font-size;
+$quarter-of-gutter: 0.25*$font-size;
+$eigth-of-gutter: 0.125*$font-size;
+
+//Box - Sizing
+$g-xl-padding: 16px !default;
+$g-l-padding: 12px !default;
+$g-m-padding: 8px !default;
+$g-s-padding: 4px !default;
+$g-margin: 16px !default;
+$g-half-margin: 8px !default;
+
+//Breakpoints
+$bp-s: 320px;
+$bp-m: 768px;
+$bp-xl: 1024px;
+
+//Animations
+$animation-duration: 400ms;
+$animation-time-function: ease-in;
+
+//State Colors
+$placeholder-color: rgba($uiGrey, 0.6);

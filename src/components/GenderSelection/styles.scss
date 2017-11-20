@@ -1,0 +1,65 @@
+// Gender Selection Component
+//
+// ------------------------------------------------------------------------
+
+// Imports
+// ------------------------------------------------------------------------
+@import "assets/styles/base/utils";
+@import "assets/styles/base/global-variables";
+@import "assets/styles/base/color";
+
+// Variables
+// ------------------------------------------------------------------------
+$gender-container-margin-top: 18px;
+$gender-container-margin-left: 20px;
+$opacity: 0.6;
+$radio-border-color: rgba($uiGreen, $opacity);
+$radio-shadow-blur: 12px;
+$bullet-size: 8px;
+$bullet-position: 4px;
+
+// Block
+// ------------------------------------------------------------------------
+.gender {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-top: $gender-container-margin-top;
+  margin-right: auto;
+  text-transform: uppercase;
+  font-size: $s-font-size;
+  font-weight: 200;
+
+  // Elements
+  // ------------------------------------------------------------------------
+  &__item {
+    align-items: center;
+    display: flex;
+
+    input {
+      appearance: none;
+      border: 1px solid $radio-border-color;
+      border-radius: 50%;
+      margin-right: $g-half-margin;
+      outline: 0;
+      padding: $g-m-padding;
+      transition: box-shadow $animation-duration $animation-time-function;
+
+      &:checked {
+        position: relative;
+        box-shadow: 0 0 $radio-shadow-blur $uiGreen;
+
+        &:before {
+          content: "";
+          position: absolute;
+          background: $uiWhite;
+          height: $bullet-size;
+          width: $bullet-size;
+          border-radius: 50%;
+          top: $bullet-position;
+          left: $bullet-position;
+        }
+      }
+    }
+  }
+}

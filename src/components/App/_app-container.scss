@@ -1,0 +1,47 @@
+// Registration
+//
+// Styles for Regristration main application container
+// ------------------------------------------------------------------------
+
+@import "assets/styles/base/settings";
+@import "assets/styles/base/images";
+@import "assets/styles/base/global-variables";
+@import "assets/styles/base/color";
+@import "assets/styles/base/utils";
+@import "assets/styles/base/typography";
+@import "assets/styles/base/icon-font";
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,400,700");
+// Fonts provided were not complete, this is why I'm using google ones.
+//@import "assets/styles/base/fonts";
+
+// Block
+// ------------------------------------------------------------------------
+.app-container {
+  background: $bg-app-image-mobile no-repeat center fixed;
+  background-size: cover;
+  color: $uiWhite;
+  font-family: "Raleway", sans-serif;
+  font-size: $font-size;
+  font-weight: 400;
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include bp($bp-m) {
+    background-image: $bg-app-image-desktop;
+  }
+
+  @include bp-retina($bp-s) {
+    background-image: $bg-app-image-mobile-2x;
+  }
+
+  @include bp-retina($bp-m) {
+    background-image: $bg-app-image-desktop-2x;
+  }
+}

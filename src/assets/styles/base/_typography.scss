@@ -1,0 +1,32 @@
+// Typography
+//
+// Here we can define global styles for a default behaviour of our html tags
+// in order to have a common look and feel across the site, for example,
+// defining that all h1 elements gonna be font sized at 18px and text will
+// be by default uppercased.
+// ------------------------------------------------------------------------
+
+@import "global-variables";
+@import "utils";
+
+h1 {
+  font-size: $xl-font-size;
+  font-weight: 700;
+  margin-bottom: $double-gutter;
+  margin-top: $double-gutter;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include bp($bp-xl) {
+    font-size: $xxl-font-size;
+  }
+}
+
+p {
+  font-size: $s-font-size;
+  line-height: $gutter;
+  margin-bottom: $gutter;
+  margin-top: $gutter;
+  text-align: center;
+  text-transform: uppercase;
+}

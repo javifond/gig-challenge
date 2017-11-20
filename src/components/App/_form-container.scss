@@ -1,0 +1,35 @@
+// Form Container Component
+//
+// ------------------------------------------------------------------------
+
+// Imports
+// ------------------------------------------------------------------------
+@import "assets/styles/base/global-variables";
+@import "assets/styles/base/utils";
+
+// Variables
+// ------------------------------------------------------------------------
+$box-shadow-blur: 12px;
+$form-max-width: 720px;
+
+// Block
+// ------------------------------------------------------------------------
+.form-container {
+  padding-left: $gutter;
+  padding-right: $gutter;
+  max-width: $form-max-width;
+
+  @include bp($bp-m) {
+    box-shadow: 0 0 $box-shadow-blur $uiGreen;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: $gutter;
+    padding-top: $gutter;
+    position: relative;
+    top: 10%;
+  }
+
+  @include bp($bp-xl) {
+    margin: 0 auto;
+  }
+}

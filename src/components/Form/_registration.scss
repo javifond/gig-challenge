@@ -1,0 +1,32 @@
+// Registration Form Component
+//
+// ------------------------------------------------------------------------
+
+// Imports
+// ------------------------------------------------------------------------
+@import "assets/styles/base/utils";
+@import "assets/styles/base/global-variables";
+
+// Block
+// ------------------------------------------------------------------------
+.registration {
+  display: flex;
+  flex-direction: column;
+
+  @include bp($bp-m) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  // Elements
+  // ------------------------------------------------------------------------
+  &__col {
+    @include bp($bp-m) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: $g-xl-padding;
+      width: 50%;
+    }
+  }
+}
